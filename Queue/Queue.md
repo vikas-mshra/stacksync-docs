@@ -38,7 +38,7 @@ Once all fields are populated, click **Create** to deploy the Queue resource to 
 
 **4. Detailed Configuration and Queue Management**
 
-After creation, the queue would open up in a new tab. This page allows you to monitor its status (e.g., **Running**), manage its underlying code via the **YAML** tab, and fine-tune its behavior in the **Config** tab.
+After creation, the queue opens in a new tab. This page allows you to monitor its status (e.g., **Running**), manage its underlying code via the **YAML** tab, and fine-tune its behavior in the **Config** tab.
 
 ![Detail configuration of the queue that we created](./detail_configuration_of_the_queue_that_we_created.png)
 
@@ -88,11 +88,11 @@ To process the batched data, you must build a Consumer Workflow. This Workflow a
 
 1.  **Set the Trigger:** Create a new [workflow](https://docs.stacksync.com/workflow-automation) and select the **Queue** trigger.
 
-![Search Queue](./search_queue_trigger.png)
+  ![Search Queue](./search_queue_trigger.png)
 
 2.  **Bind the Queue:** Attach the trigger to your newly created Queue.
 
-![Configure your trigger](./configure_your_trigger.png)
+  ![Configure your trigger](./configure_your_trigger.png)
 
 3.  **Configure Trigger Parameters:** In the configuration panel that appears, enter specific values for the following fields:
 
