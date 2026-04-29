@@ -1,8 +1,8 @@
-# StackSync Queues
+# Stacksync Queues
 
-Queues act as the asynchronous backbone of StackSync, allowing you to decouple data ingestion from data processing. By batching records and handling API rate limits natively, Queues ensure reliable, high-volume data delivery between sources (like PostgreSQL) and destinations (like HubSpot).
+Queues act as the asynchronous backbone of Stacksync, allowing you to decouple data ingestion from data processing. By batching records and handling API rate limits natively, Queues ensure reliable, high-volume data delivery between sources (like PostgreSQL) and destinations (like HubSpot).
 
-A Queue in StackSync is a managed message broker designed to handle high-throughput event streams. It bridges the gap between real-time Sync operations and complex Workflows.
+A Queue in Stacksync is a managed message broker designed to handle high-throughput event streams. It bridges the gap between real-time Sync operations and complex Workflows.
 
 **Core Benefits:**
 
@@ -26,7 +26,7 @@ From your workbench, navigate to **Home** > **Create Resource (⌄)** and select
 
 In the modal that appears, enter specific values for the following fields. The values shown below represent common production configurations.
 
-- **Workflows App Queue Name:** Provide a unique, human-readable name for your Queue. This is its display name within StackSync (e.g., `Bulk processing of contacts`).
+- **Workflows App Queue Name:** Provide a unique, human-readable name for your Queue. This is its display name within Stacksync (e.g., `Bulk processing of contacts`).
 - **Queue Resource ID:** Enter a unique programmatic identifier. This ID is used when referencing the Queue in code, JSON payloads, and API calls.
 - **Queue Region:** Select the nearest geographical region for optimal performance (e.g., `US East (N. Virginia)`).
 - **Flush Batch Size:** Set the exact number of records the Queue should accumulate before flushing. This directly controls your bulk processing volume. _Note: Consider destination API batch limits when setting this value._
@@ -52,13 +52,13 @@ Key management features available on this page include:
 
 ## Adding Data to a Queue (Producers)
 
-You actuate a Queue by pushing data into it. In StackSync, you achieve this through [Sync Event Triggers](https://docs.stacksync.com/two-way-sync/guides/event-triggers) or standard [Workflows](https://docs.stacksync.com/workflow-automation).
+You actuate a Queue by pushing data into it. In Stacksync, you achieve this through [Sync Event Triggers](https://docs.stacksync.com/two-way-sync/guides/event-triggers) or standard [Workflows](https://docs.stacksync.com/workflow-automation).
 
 ### Via Sync Event Triggers
 
 You can configure a Sync to push data directly to a queue when a specific database event occurs (e.g., a row is created, updated, or deleted in PostgreSQL).
 
-When setting up the Event Trigger, construct your JSON payload using StackSync variables to capture the event context:
+When setting up the Event Trigger, construct your JSON payload using Stacksync variables to capture the event context:
 
 - `<<record>>`: Replaced with the complete JSON representation of the database record.
 - `<<changes>>`: Replaced with the specific fields modified during an update.
