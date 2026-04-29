@@ -52,11 +52,11 @@ Key management features available on this page include:
 
 ## Adding Data to a Queue (Producers)
 
-You actuate a Queue by pushing data into it. In Stacksync, you achieve this through [Sync Event Triggers](https://docs.stacksync.com/two-way-sync/guides/event-triggers) or standard [Workflows](https://docs.stacksync.com/workflow-automation).
+You actuate a Queue by pushing data into it. In Stacksync, you achieve this through [Syncs Event Triggers](https://docs.stacksync.com/two-way-sync/guides/event-triggers) or standard [Workflows](https://docs.stacksync.com/workflow-automation).
 
-### Via Sync Event Triggers
+### Via Syncs Event Triggers
 
-You can configure a Sync to push data directly to a queue when a specific database event occurs (e.g., a row is created, updated, or deleted in PostgreSQL).
+You can configure a Syncs to push data directly to a queue when a specific database event occurs (e.g., a row is created, updated, or deleted in PostgreSQL).
 
 When setting up the Event Trigger, construct your JSON payload using Stacksync variables to capture the event context:
 
